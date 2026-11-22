@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>لوحة تحكم الأجهزة</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="/socket.io/socket.io.js"></script>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>لوحة تحكم الأجهزة</h1>
+            <div class="auth-section">
+                <input type="password" id="password-input" placeholder="كلمة المرور">
+                <button id="connect-btn">اتصال</button>
+            </div>
+        </header>
+        
+        <div class="devices-container">
+            <h2>الأجهزة المتصلة</h2>
+            <div id="devices-list" class="devices-list">
+                <!-- سيتم ملء هذا القسم عبر JavaScript -->
+            </div>
+        </div>
+        
+        <div class="commands-container">
+            <h2>إرسال أوامر</h2>
+            <div class="command-form">
+                <label for="device-select">اختر الجهاز:</label>
+                <select id="device-select">
+                    <option value="">-- اختر جهازًا --</option>
+                </select>
+                
+                <div class="command-options">
+                    <h3>تشغيل أغنية</h3>
+                    <input type="text" id="music-path" placeholder="مسار الملف الصوتي">
+                    <button id="play-song-btn" class="btn">تشغيل أغنية</button>
+                    
+                    <h3>منع السكون</h3>
+                    <div class="toggle-container">
+                        <label class="switch">
+                            <input type="checkbox" id="keep-awake-toggle">
+                            <span class="slider round"></span>
+                        </label>
+                        <span id="keep-awake-status">معطل</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

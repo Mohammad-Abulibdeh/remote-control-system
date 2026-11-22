@@ -1,0 +1,10 @@
+node_modules/
+__pycache__/
+*.pyc
+build/
+dist/
+*.spec
+# real config files with secrets
+server/config.json
+client/config.ini
+
